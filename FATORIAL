@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main()
+{
+
+    int v1[5];
+    int v2[5];
+    int i, j;
+    int fatorial;
+
+    printf("DIGITE 5 VALORES PARA |V1|\n");
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%d", &v1[i]);
+        if (v1[i] < 0)
+        {
+            printf("OPCAO INVALIDA! Digite um número positivo.\n");
+        }
+    }
+    for (i = 0; i < 5; i++)
+    {
+        fatorial = 1;
+        for (j = 1; j <= v1[i]; j++)
+        {
+            fatorial *= j;
+        }
+        v2[i] = fatorial;
+    }
+    for (i = 0; i < 5; i++)
+    {
+        printf("\nVALORES |V1|: %d\t VALORES |V2|: %d\t", v1[i], v2[i]);
+    }
+    return 0;
+}
